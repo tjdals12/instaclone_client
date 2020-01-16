@@ -1,0 +1,36 @@
+@import 'styles/utils';
+
+.app-download-links-box {
+    width: 100%;
+    height: 102px;
+
+    .description {
+        display: inline-block;
+        width: 100%;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 0.85rem;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+
+    .links {
+        flex-direction: row;
+        text-align: center;
+        margin: 10px 0;
+
+        .link {
+            &:first-child {
+                margin-right: 5px;
+            }
+
+            &:last-child {
+                margin-left: 5px;
+            }
+
+            img {
+                height: 40px;
+            }
+        }
+    }
+}

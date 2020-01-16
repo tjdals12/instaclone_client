@@ -1,0 +1,23 @@
+@import 'styles/utils';
+
+.separator {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 18px;
+
+    .separator-line {
+        flex: 0.4;
+        border: 0.5px solid $oc-gray-2;
+    }
+
+    .separator-text {
+        flex: 0.2;
+        text-align: center;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $oc-gray-6;
+    }
+}

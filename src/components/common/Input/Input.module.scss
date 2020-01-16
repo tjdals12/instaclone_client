@@ -1,0 +1,57 @@
+@import 'styles/utils';
+
+.custom-input {
+    position: relative;
+    width: 260px;
+    height: 38px;
+    border: 1px solid $oc-gray-2;
+    border-radius: 5px;
+    background: $oc-gray-0;
+    margin-bottom: 6px;
+    box-sizing: border-box;
+
+    &.focus {
+        border: 1px solid $oc-gray-5;
+    }
+
+    .placeholder {
+        position: absolute;
+        top: 0;
+        left: 7px;
+        width: 95%;
+        height: 100%;
+        line-height: 36px;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 0.7rem;
+        color: $oc-gray-6;
+        transition: all 0.1s ease;
+    }
+
+    .input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 95%;
+        height: 100%;
+        padding: 9px 0 8px 7px;
+        font-family: 'Gothic A1', sans-serif;
+        font-weight: 600;
+        background: transparent;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+    }
+
+    &.has-text {
+        .placeholder {
+            display: inline-block;
+            left: 0;
+            transform: scale(0.83) translateY(-10px) translateX(-18px);
+        }
+
+        .input {
+            padding: 12px 0 0 7px;
+            font-size: 0.7rem;
+        }
+    }
+}

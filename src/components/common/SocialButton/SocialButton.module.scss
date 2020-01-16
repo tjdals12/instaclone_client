@@ -1,0 +1,58 @@
+@import 'styles/utils';
+
+.social-button {
+    width: 280px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    margin: 8px;
+    outline: none;
+
+    svg {
+        position: relative;
+        top: 3px;
+    }
+
+    span {
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding-left: 10px;
+        text-transform: capitalize;
+    }
+
+    &.google {
+        color: $oc-red-6;
+    }
+
+    &.facebook {
+        color: $oc-blue-9;
+    }
+
+    &.github {
+        color: #000;
+    }
+
+    &.fill {
+        color: #fff;
+
+        &.google {
+            background: $oc-red-6;
+        }
+
+        &.facebook {
+            background: $oc-blue-6;
+        }
+
+        &.github {
+            background: #000;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        transition: opacity 0.15s ease-in;
+        opacity: 0.9;
+    }
+}

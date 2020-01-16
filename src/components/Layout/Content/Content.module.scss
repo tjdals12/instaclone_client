@@ -1,0 +1,12 @@
+@import 'styles/utils';
+
+.content {
+    flex: 1;
+    display: flex;
+    width: 1024px;
+    margin: 0 auto;
+
+    @include media('<large') {
+        width: 100%;
+    }
+}

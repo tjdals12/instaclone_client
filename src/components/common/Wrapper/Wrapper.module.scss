@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.size {
+        &-xs {
+            width: 360px;
+        }
+
+        &-sm {
+            width: 568px;
+        }
+
+        &-md {
+            width: 768px;
+        }
+
+        &-lg {
+            width: 1024px;
+        }
+
+        &-xl {
+            width: 1200px;
+        }
+    }
+}

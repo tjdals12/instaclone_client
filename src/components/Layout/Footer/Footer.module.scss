@@ -1,0 +1,68 @@
+@import 'styles/utils';
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 6.5rem;
+    padding: 0 20px;
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 1024px;
+
+        .footer-nav {
+            &-content {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+
+            &-item {
+                display: inline-block;
+                margin-right: 0.85rem;
+
+                &-link {
+                    font-family: 'Gothic A1', sans-serif;
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    color: $oc-blue-9;
+                }
+            }
+        }
+
+        .footer-copyright {
+            margin-left: auto;
+
+            font-family: 'Gothic A1', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: $oc-gray-6;
+
+            text-transform: uppercase;
+        }
+    }
+
+    @include media('<medium') {
+        &-content {
+            flex-direction: column;
+
+            .footer-nav {
+                &-content {
+                    max-width: 360px;
+                }
+
+                &-item {
+                    margin-bottom: 0.55rem;
+                }
+            }
+
+            .footer-copyright {
+                margin: 0 auto;
+            }
+        }
+    }
+}
