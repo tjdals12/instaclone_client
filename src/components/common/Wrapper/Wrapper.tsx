@@ -7,22 +7,31 @@ const cx = classNames.bind(styles);
 type WrapperProps = {
     className?: string;
     center?: boolean;
-    size: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    direction?: 'column' | 'row';
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    style?: object;
     children: React.ReactNode;
 };
 
 export default function Wrapper({
     className,
     center,
-    size = 'sm',
+    size,
+    direction = 'column',
     children,
+    style,
 }: WrapperProps): ReactElement {
     const classes = cx(
         'wrapper',
         className,
         center ? 'center' : '',
+        direction,
         `size-${size}`,
     );
 
-    return <div className={classes}>{children}</div>;
+    return (
+        <div className={classes} style={style}>
+            {children}
+        </div>
+    );
 }

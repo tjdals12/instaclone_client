@@ -20,7 +20,7 @@ module.exports = {
             template: './public/index.html',
             filename: 'index.html',
         }),
-        new MiniCssExtractPlugin({ filename: 'style.css' }),
+        new MiniCssExtractPlugin({ filename: './style.css' }),
         new HardSourcWebpackPlugin(),
         new ForkTsCheckerWebpackPlugin(),
     ],

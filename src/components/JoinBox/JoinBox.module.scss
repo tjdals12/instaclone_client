@@ -1,0 +1,26 @@
+@import 'styles/utils';
+
+.join-box {
+    border: 1px solid $oc-gray-3;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    background: #fff;
+
+    .inform {
+        margin: -20px 40px 10px 40px;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-align: center;
+        color: $oc-gray-6;
+    }
+
+    .policy {
+        margin: 10px 65px 30px 65px;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        text-align: center;
+        color: $oc-gray-6;
+    }
+}

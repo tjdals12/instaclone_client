@@ -1,14 +1,14 @@
 import React from 'react';
 import { Wrapper } from 'components/common';
-import LoginBox from 'components/LoginBox';
+import JoinBox from 'components/JoinBox';
 import AccountQuestionBox from 'components/AccountQuestionBox';
 import AppDownloadLinksBox from 'components/AppDownloadLinksBox';
 
-export default function LoginPage(): React.ReactElement {
+export default function JoinPage(): React.ReactElement {
     return (
         <Wrapper center size="xs">
-            <LoginBox />
-            <AccountQuestionBox type="login" />
+            <JoinBox />
+            <AccountQuestionBox type="join" />
             <AppDownloadLinksBox />
         </Wrapper>
     );
