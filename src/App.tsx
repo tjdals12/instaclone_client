@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch } from 'react-router-dom';
-import { LayoutRoute, AccountLayout } from 'components/Layout';
-import { HomePage, LoginPage, JoinPage } from 'pages';
+import { LayoutRoute, AccountLayout, MainLayout } from 'components/Layout';
+import { HomePage, LoginPage, JoinPage, MainPage } from 'pages';
 
 export default function App(): React.ReactElement {
     return (
@@ -24,6 +24,12 @@ export default function App(): React.ReactElement {
                     path="/accounts/join"
                     layout={AccountLayout}
                     component={JoinPage}
+                />
+                <LayoutRoute
+                    exact
+                    path="/main"
+                    layout={MainLayout}
+                    component={MainPage}
                 />
             </Switch>
         </BrowserRouter>

@@ -78,6 +78,11 @@ a {
     text-decoration: none;
 }
 
+a:visited,
+a:link {
+    color: #000;
+}
+
 /**
    * 1. Remove the bottom border in Chrome 57-
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
