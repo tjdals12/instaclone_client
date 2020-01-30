@@ -1,0 +1,72 @@
+@import 'styles/utils';
+
+.user-card {
+    padding: 0 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+
+    .description {
+        padding-left: 15px;
+
+        .title {
+            margin: 0;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .sub-title {
+            margin: 0;
+            padding: 3px 0 0 0;
+            font-size: 0.85rem;
+            color: $oc-gray-6;
+        }
+    }
+
+    &.story {
+        margin-bottom: 10px;
+        padding: 0 3px;
+
+        .description {
+            .sub-title {
+                font-size: 0.65rem;
+            }
+        }
+    }
+
+    &.recommends {
+        margin-bottom: 10px;
+        padding: 0 3px;
+
+        .description {
+            .sub-title {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    &.feed {
+        padding: 0px;
+
+        .description {
+            .sub-title {
+                font-size: 0.75rem;
+                color: #000;
+            }
+        }
+    }
+
+    .follow {
+        margin-left: auto;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: $oc-blue-6;
+    }
+}

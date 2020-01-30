@@ -1,0 +1,31 @@
+@import 'styles/utils';
+
+.comment {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .text {
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 0.85rem;
+
+        .writer {
+            cursor: pointer;
+        }
+    }
+
+    .like {
+        margin-left: auto;
+        font-size: 0.75rem;
+        color: $oc-gray-5;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+}

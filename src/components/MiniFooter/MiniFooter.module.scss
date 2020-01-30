@@ -1,0 +1,41 @@
+@import 'styles/utils';
+
+.mini-footer {
+    margin: 15px 0;
+
+    &-nav {
+        display: block;
+        overflow: hidden;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            float: left;
+
+            .link {
+                font-size: 0.7rem;
+                color: $oc-gray-5;
+
+                &::after {
+                    content: '\00B7';
+                    margin: 0 0.25em;
+                }
+            }
+
+            &:nth-last-child(1) .link::after {
+                content: '';
+            }
+        }
+    }
+
+    .copyright {
+        width: 100%;
+        font-size: 0.75rem;
+        color: $oc-gray-5;
+
+        .text {
+            margin: 20px 0;
+        }
+    }
+}
