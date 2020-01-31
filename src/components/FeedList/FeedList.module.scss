@@ -20,118 +20,56 @@
             align-items: center;
             justify-content: center;
         }
-    }
 
-    .nav {
-        position: relative;
-        padding: 0 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .footer {
+            padding: 0 15px;
 
-        .list {
-            margin: 0;
-            padding: 0;
-            display: block;
-            overflow: hidden;
-            list-style: none;
-
-            .item {
-                float: left;
-                margin: 8px;
-
-                &:nth-child(1) {
-                    margin-left: 0;
-                }
+            .like-count {
+                margin: 0;
+                font-family: 'Gothic A1', sans-serif;
+                font-size: 0.85rem;
+                font-weight: 600;
             }
 
-            &.icons {
-                margin-right: auto;
-            }
+            .description {
+                margin-top: 8px;
 
-            &.dots {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                .content-more {
+                    font-family: 'Gothic A1', sans-serif;
+                    font-size: 0.8rem;
+                    color: $oc-gray-5;
 
-                .dot {
-                    float: left;
-                    margin-right: 4px;
-                    width: 6px;
-                    height: 6px;
-                    background: $oc-gray-5;
-                    border-radius: 50%;
+                    &::before {
+                        content: '....';
+                        margin-left: 8px;
+                        margin-right: 3px;
+                    }
 
-                    &.active {
-                        background: $oc-blue-6;
+                    &:hover {
+                        cursor: pointer;
                     }
                 }
             }
 
-            &.bookmark {
-                margin-left: auto;
-            }
-        }
-    }
-
-    .footer {
-        padding: 0 15px;
-
-        .like-count {
-            margin: 0;
-            font-family: 'Gothic A1', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .description {
-            margin-top: 8px;
-
-            .content {
-                font-size: 0.85rem;
-
-                .writer {
-                    cursor: pointer;
-                }
-
-                &::after {
-                    content: '....';
-                    margin-left: 8px;
-                    font-size: 1rem;
-                }
-            }
-
-            .content-more {
-                margin-left: 3px;
+            .comment-more {
+                margin: 8px 0;
+                padding: 0;
+                border: none;
+                outline: none;
                 font-family: 'Gothic A1', sans-serif;
                 font-size: 0.8rem;
+                font-weight: 600;
                 color: $oc-gray-5;
 
                 &:hover {
                     cursor: pointer;
                 }
             }
-        }
 
-        .comment-more {
-            margin: 8px 0;
-            padding: 0;
-            border: none;
-            outline: none;
-            font-family: 'Gothic A1', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: $oc-gray-5;
-
-            &:hover {
-                cursor: pointer;
+            .timestamp {
+                font-size: 0.65rem;
+                color: $oc-gray-6;
             }
-        }
-
-        .timestamp {
-            font-size: 0.65rem;
-            color: $oc-gray-6;
         }
     }
 }

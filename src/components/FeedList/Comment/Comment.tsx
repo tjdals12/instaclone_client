@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import { FaRegHeart } from 'react-icons/fa';
+import { Description } from 'components/common';
 import styles from './Comment.module.scss';
 
 const cx = classNames.bind(styles);
@@ -16,9 +17,7 @@ export default function Comment({
 }: CommentProps): React.ReactElement {
     return (
         <li className={cx('comment')}>
-            <span className={cx('text')}>
-                <strong className={cx('writer')}>{writer}</strong> {content}
-            </span>
+            <Description title={writer} content={content} />
             <FaRegHeart className={cx('like')} />
         </li>
     );

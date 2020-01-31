@@ -1,10 +1,54 @@
-.slider {
-    overflow: hidden;
+@import 'styles/utils';
 
-    .slides {
-        list-style: none;
+.slider {
+    position: relative;
+
+    .screen {
+        overflow: hidden;
+
+        .slides {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+    }
+
+    .nav {
         margin: 0;
         padding: 0;
-        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateY(-50%);
+        list-style: none;
+
+        &.inner {
+            bottom: 15px;
+
+            .dot {
+                &:active {
+                    background: #fff;
+                }
+            }
+        }
+
+        &.outer {
+            bottom: -20px;
+
+            .dot {
+                &.active {
+                    background: $oc-blue-6;
+                }
+            }
+        }
+
+        .dot {
+            float: left;
+            margin-right: 5px;
+            width: 6px;
+            height: 6px;
+            background: $oc-gray-5;
+            border-radius: 50%;
+        }
     }
 }

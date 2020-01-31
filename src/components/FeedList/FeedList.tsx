@@ -1,21 +1,16 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import { Wrapper } from 'components/common';
+import { Wrapper, Description } from 'components/common';
 import UserCard from 'components/UserCard';
 import User from 'assets/img/user.jpeg';
 import { MdMoreHoriz } from 'react-icons/md';
 import Feed from 'assets/img/feed.jpg';
 import Feed1 from 'assets/img/feed1.jpg';
 import Feed2 from 'assets/img/feed2.jpg';
-import {
-    FaRegHeart,
-    FaRegComment,
-    FaRegPaperPlane,
-    FaRegBookmark,
-} from 'react-icons/fa';
 import Slider from 'components/Slider';
 import styles from './FeedList.module.scss';
 import CommentList from './CommentList';
+import Toolbar from './Toolbar';
 
 const cx = classNames.bind(styles);
 
@@ -48,47 +43,18 @@ export default function FeedList(): React.ReactElement {
                     <MdMoreHoriz size={20} />
                 </div>
 
-                <Slider images={images} />
+                <Slider images={images} nav="outer" />
 
-                <div className={cx('nav')}>
-                    <ul className={cx('list', 'icons')}>
-                        <li className={cx('item')}>
-                            <FaRegHeart size={25} />
-                        </li>
-
-                        <li className={cx('item')}>
-                            <FaRegComment size={25} />
-                        </li>
-
-                        <li className={cx('item')}>
-                            <FaRegPaperPlane size={25} />
-                        </li>
-                    </ul>
-
-                    <ul className={cx('list', 'dots')}>
-                        {images.map((img, index) => (
-                            <li
-                                key={index}
-                                className={cx('dot', index === 0 && 'active')}
-                            />
-                        ))}
-                    </ul>
-
-                    <ul className={cx('list', 'bookmark')}>
-                        <li>
-                            <FaRegBookmark size={25} />
-                        </li>
-                    </ul>
-                </div>
+                <Toolbar />
 
                 <div className={cx('footer')}>
                     <p className={cx('like-count')}>좋아요 156개</p>
 
                     <div className={cx('description')}>
-                        <span className={cx('content')}>
-                            <strong className={cx('writer')}>eunjin__a</strong>{' '}
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                        </span>
+                        <Description
+                            title="eunjin__a"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing"
+                        />
                         <span className={cx('content-more')}>더 보기</span>
                     </div>
 

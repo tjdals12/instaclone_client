@@ -6,3 +6,4 @@ export { default as Separator } from './Separator';
 export { default as Wrapper } from './Wrapper';
 export { default as Logo } from './Logo';
 export { default as Thumbnail } from './Thumbnail';
+export { default as Description } from './Description';
